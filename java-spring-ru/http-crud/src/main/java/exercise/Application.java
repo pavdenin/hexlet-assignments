@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import exercise.model.Post;
@@ -30,9 +29,9 @@ public class Application {
     // BEGIN
     @GetMapping("/posts")
     public List<Post> postList(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer size) {
-        if (page<1) page=1;
-        if (size<1) size=10;
-        return posts.stream().skip((page-1)*size).limit(size).toList();
+        if (page < 1) { page = 1; }
+        if (size < 1) { size = 10; }
+        return posts.stream().skip((page - 1) * size).limit(size).toList();
     }
 
     @GetMapping("/posts/{id}")

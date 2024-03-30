@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.41">
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/first-start/src/main/java/exercise/Application.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/first-start/src/test/java/exercise/ApplicationTest.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/http-crud/src/main/java/exercise/model/Post.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/http-crud/src/main/java/exercise/Application.java">
+<error line="31" severity="error" message="Line is longer than 120 characters (found 129)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="32" column="23" severity="error" message="&apos;{&apos; at column 23 should have line break after." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="33" column="23" severity="error" message="&apos;{&apos; at column 23 should have line break after." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="63" column="52" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/http-crud/src/main/java/exercise/Data.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/http-crud/src/test/java/exercise/ApplicationTest.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/http-crud/src/test/java/exercise/util/TestUtil.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/annotations/src/main/java/exercise/annotation/Inspect.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/annotations/src/main/java/exercise/model/Address.java">
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/annotations/src/main/java/exercise/Application.java">
+<error line="15" severity="error" message="Line is longer than 120 characters (found 134)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="15" column="45" severity="error" message="&apos;+&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="15" column="45" severity="error" message="&apos;+&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/home/pavdenin/Hexlet/hexlet-assignments/java-spring-ru/annotations/src/test/java/exercise/ApplicationTest.java">
+</file>
+</checkstyle>

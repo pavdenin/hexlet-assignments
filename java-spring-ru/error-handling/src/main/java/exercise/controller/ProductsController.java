@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
+import java.util.Optional;
 
 import exercise.model.Product;
 import exercise.repository.ProductRepository;
@@ -37,7 +38,26 @@ public class ProductsController {
     }
 
     // BEGIN
-    
+    @GetMapping(path = "/{id}")
+    public Product getProduct(@PathVariable Long id) {
+        var product = productRepository.findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("Product with id " + id + " not found"));
+        return product;
+    }
+
+    @PutMapping(path = "/{id}")
+    public Product updateProduct(@PathVariable Long id, @RequestBody Product newProduct) {
+
+        var product = productRepository.findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("Product with id " + id + " not found"));
+
+        product.setPrice(newProduct.getPrice());
+        product.setTitle(newProduct.getTitle());
+        productRepository.save(product);
+
+        return product;
+
+    }
     // END
 
     @DeleteMapping(path = "/{id}")

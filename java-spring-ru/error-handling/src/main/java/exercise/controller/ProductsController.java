@@ -13,8 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
-import java.util.Optional;
-
 import exercise.model.Product;
 import exercise.repository.ProductRepository;
 import exercise.exception.ResourceNotFoundException;

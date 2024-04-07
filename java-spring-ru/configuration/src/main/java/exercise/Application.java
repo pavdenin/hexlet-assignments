@@ -21,7 +21,22 @@ public class Application {
     private List<User> users = Data.getUsers();
 
     // BEGIN
-    
+    @Autowired
+    private UserProperties admins;
+
+    @GetMapping("/admins")
+    public List<String> getAdminNames() {
+        List<String> adminsEmailList = admins.getAdmins();
+
+        List<String> adminNames = users.stream()
+        .filter(u -> adminsEmailList.stream().anyMatch(a -> a.equals(u.getEmail())))
+        .map(p -> p.getName())
+        .sorted()
+        .toList();
+
+        return adminNames;
+
+    }
     // END
 
     @GetMapping("/users")

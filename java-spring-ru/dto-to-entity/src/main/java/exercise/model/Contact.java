@@ -6,7 +6,10 @@ import jakarta.persistence.Table;
 import jakarta.persistence.EntityListeners;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDate;
 
@@ -20,6 +23,9 @@ import jakarta.persistence.GeneratedValue;
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Contact {
 
     @Id

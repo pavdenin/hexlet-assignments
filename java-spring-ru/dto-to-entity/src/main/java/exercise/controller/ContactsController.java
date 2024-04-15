@@ -37,8 +37,8 @@ public class ContactsController {
     public ContactDTO createContact(@RequestBody ContactCreateDTO newContact) {
 
         Contact contact = toEntity(newContact);
-        Contact savedContact = contactRepository.save(contact);
-        return toContactDto(savedContact);
+        contactRepository.save(contact);
+        return toContactDto(contact);
     }
 
     private ContactDTO toContactDto(Contact contact) {
